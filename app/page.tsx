@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { FaWindows, FaApple, FaLinux, FaCopy, FaCheck } from 'react-icons/fa';
+import { FaWindows, FaApple, FaLinux, FaCopy, FaCheck, FaGithub } from 'react-icons/fa';
 import { LuTerminal } from 'react-icons/lu';
 
 export default function CLIPage() {
@@ -107,12 +107,14 @@ export default function CLIPage() {
               </div>
             </button>
             
-            <button
-              onClick={() => window.open('https://github.com/ee3lol/ee3-cli/tree/main/scripts', '_blank')}
-              className="py-4 px-6 text-gray-500 hover:text-gray-300 transition-colors"
+            <a
+              href="https://github.com/ee3lol/ee3-cli/tree/main/scripts"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-gray-500 hover:text-gray-300 transition-colors self-center ml-2 mr-4 underline"
             >
-              View install script
-            </button>
+              View install scripts
+            </a>
           </div>
           
           {/* Command display */}
@@ -160,6 +162,29 @@ export default function CLIPage() {
         >
           <p>After installation, run <code className="bg-black/30 px-2 py-1 rounded text-gray-300">ee3 --help</code> to see available commands</p>
           <p className="mt-2 text-xs">Version 0.1.0 - Stuff I prefer (until it breaks)</p>
+          
+          <div className="mt-6 flex items-center justify-center gap-4">
+            <a 
+              href="https://github.com/ee3lol/ee3-cli" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors"
+            >
+              <FaGithub className="text-lg" />
+              <span>GitHub Repo</span>
+            </a>
+          </div>
+          
+          <div className="mt-8 text-xs text-gray-600">
+            <a 
+              href="https://www.ee3.lol" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-gray-400 transition-colors"
+            >
+              www.ee3.lol
+            </a>
+          </div>
         </motion.div>
       </motion.div>
     </div>
